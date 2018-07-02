@@ -9,7 +9,7 @@ cd ${src_dir}
 if [ ! -f "${src_dir}/openresty-1.13.6.2.tar.gz" ]; then
   wget 'https://openresty.org/download/openresty-1.13.6.2.tar.gz'
 fi
-
+apt-get install libpcre3 libpcre3-dev libssl-dev zlib1g-dev -y
 tar -zxvf openresty-1.13.6.2.tar.gz
 
 cd openresty-1.13.6.2
