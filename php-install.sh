@@ -1,11 +1,10 @@
 #!/usr/bin/env bash
 # 安装php
 # 安装依赖
-# apt install -y autoconf libmcrypt-dev libcurl4-openssl-dev pkg-config libjpeg-dev libpng-dev
-# add-apt-repository ppa:no1wantdthisname/ppa
-# apt-update
-# apt install libfreetype6 -y
-# apt-get -y install libfreetype6-dev
+apt install -y autoconf libmcrypt-dev libcurl4-openssl-dev pkg-config libjpeg-dev libpng-dev libxml2-dev
+add-apt-repository ppa:no1wantdthisname/ppa
+apt update
+apt install libfreetype6 libfreetype6-dev -y
 
 src_dir="/root/src"
 if [ ! -d ${src_dir} ]; then
