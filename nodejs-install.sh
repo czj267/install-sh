@@ -13,3 +13,5 @@ tar -xvf 'node-v8.11.3-linux-x64.tar'
 mv node-v8.11.3-linux-x64 node-8.11
 
 mv node-8.11 /usr/local/
+
+/usr/local/node-8.11/bin/npm install -g cnpm --registry=https://registry.npm.taobao.org
