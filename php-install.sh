@@ -46,13 +46,13 @@ make clean
 --with-xmlrpc \
 --enable-zip \
 --enable-soap \
---without-pear \
 --with-gettext \
 --enable-session \
 --with-curl \
 --with-jpeg-dir \
 --with-freetype-dir \
 --enable-opcache
+#--without-pear 
 # --with-libedit 命令行交互模式
 # --with-config-file-path php.ini 配置文件目录
 make -j4 && make install
