@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # 安装php
 # 安装依赖
-apt install -y autoconf libmcrypt-dev libcurl4-openssl-dev pkg-config libjpeg-dev libpng-dev libxml2-dev libedit-dev
+apt install -y autoconf libmcrypt-dev libcurl4-openssl-dev pkg-config libjpeg-dev libpng-dev libxml2-dev libedit-dev libssl-dev
 add-apt-repository ppa:no1wantdthisname/ppa
 apt update
 apt install libfreetype6 libfreetype6-dev -y
