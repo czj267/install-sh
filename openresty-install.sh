@@ -14,7 +14,7 @@ tar -zxvf openresty-1.13.6.2.tar.gz
 
 cd openresty-1.13.6.2
 install_dir=/usr/local/openresty-1.13
-./configure --prefix="${install_dir}/openresty-1.13"
+./configure --prefix="${install_dir}"
 make -j4
 make install
 mkdir "${install_dir}/nginx/conf/conf.d"
