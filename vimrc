@@ -1,9 +1,53 @@
+let mapleader=";"   " 定义快捷键的前缀，即<Leader>
+
+filetype on   " 开启文件类型侦测
+
+filetype plugin on    " 根据侦测到的不同类型加载对应的插件
+
+nmap LB 0  " 定义快捷键到行首和行尾
+nmap LE $
+
+vnoremap <Leader>y "+y   " 设置快捷键将选中文本块复制至系统剪贴板
+
+nmap <Leader>p "+p       " 设置快捷键将系统剪贴板内容粘贴至 vim
+
+nmap <Leader>q :q<CR>    " 定义快捷键关闭当前分割窗口
+
+nmap <Leader>w :w<CR>    " 定义快捷键保存当前窗口内容
+
+nmap <Leader>WQ :wa<CR>:q<CR>    " 定义快捷键保存所有窗口内容并退出 vim
+
+nmap <Leader>Q :qa!<CR>     " 不做任何保存，直接退出 vim
+
+nnoremap nw <C-W><C-W>       " 不做任何保存，直接退出 vim
+
+nnoremap <Leader>lw <C-W>l   " 跳转至右方的窗口
+
+nnoremap <Leader>hw <C-W>h   " 跳转至左方的窗口
+
+nnoremap <Leader>kw <C-W>k   " 跳转至上方的子窗口
+
+nnoremap <Leader>jw <C-W>j   " 跳转至下方的子窗口
+
+nmap <Leader>M %             " 定义快捷键在结对符之间跳转
+
+autocmd BufWritePost $MYVIMRC source $MYVIMRC    " 让配置变更立即生效
+
+set incsearch          " 开启实时搜索功能
+
+set ignorecase        " 搜索时大小写不敏感
+
+set nocompatible        " 关闭兼容模式
+
+set wildmenu           " vim 自身命令行模式智能补全
+
 set gcr=a:block-blinkon0   " 禁止光标闪烁
 
 set guioptions-=l " 禁止显示滚动条
 set guioptions-=L
 set guioptions-=r
 set guioptions-=R
+
 set guioptions-=m " 禁止显示菜单和工具条
 set guioptions-=T
 
