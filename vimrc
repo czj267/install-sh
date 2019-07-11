@@ -51,22 +51,11 @@ set guioptions-=R
 set guioptions-=m " 禁止显示菜单和工具条
 set guioptions-=T
 
-fun! ToggleFullscreen()    " 将外部命令 wmctrl 控制窗口最大化的命令行参数封装成一个 vim 的函数
-	call system("wmctrl -ir " . v:windowid . " -b toggle,fullscreen")
-endf
-
-map <silent> <F11> :call ToggleFullscreen()<CR>   " 全屏开/关快捷键
-
-autocmd VimEnter * call ToggleFullscreen()   " 启动 vim 时自动全屏
-
 set laststatus=2 " 总是显示状态栏
  
 set ruler  " 显示光标当前位置
 
 set number  " 开启行号显示
-
-set cursorline    " 高亮显示当前行/列
-"set cursorcolumn
 
 set hlsearch   " 高亮显示搜索结果
 
@@ -105,5 +94,13 @@ set foldmethod=syntax
 
 set nofoldenable  " 启动 vim 时关闭折叠代码
 
+fun! ToggleFullscreen()    " 将外部命令 wmctrl 控制窗口最大化的命令行参数封装成一个 vim 的函数
+	call system("wmctrl -ir " . v:windowid . " -b toggle,fullscreen")
+endf
 
+map <silent> <F11> :call ToggleFullscreen()<CR>   " 全屏开/关快捷键
 
+autocmd VimEnter * call ToggleFullscreen()   " 启动 vim 时自动全屏
+
+set cursorline    " 高亮显示当前行/列
+"set cursorcolumn
