@@ -100,7 +100,7 @@ let g:indent_guides_guide_size=1     " 色块宽度
 
 :nmap <silent> <Leader>i <Plug>IndentGuidesToggle    " 快捷键 i 开/关缩进可视化
 
-"set foldmethod=indent  " 基于缩进或语法进行代码折叠
+set foldmethod=indent  " 基于缩进或语法进行代码折叠
 set foldmethod=syntax
 
 set nofoldenable  " 启动 vim 时关闭折叠代码
